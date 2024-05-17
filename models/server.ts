@@ -23,10 +23,11 @@ export class Server {
     routes():void {
         this.app.use('/gastos', gastosRoutes)
     }
-    listen():void{
-        this.app.listen(8080,() => {
-          console.log("http://localhost:",8080)
-        })
+    listen(): void {
+        const port = 8080;
+        this.app.listen(port, () => {
+            console.log(`Server running at ===> http://localhost:${port}`);
+        });
     }
 
 }
